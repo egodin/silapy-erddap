@@ -6,6 +6,8 @@ Author: Etienne Godin
 Author email: etienne.godin@cen.ulaval.ca
 """
 # TODO:     1. generate output to log
+#           2. add timestamp to output
+#           3. add full path to output
 
 __version__ = "1"
 
