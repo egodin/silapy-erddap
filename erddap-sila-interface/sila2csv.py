@@ -36,8 +36,21 @@ def sila2csvconv(data_path_dir):
                       'measuredData']
         df['networkId'] = 'SILA'                            # set network name id
         df['time'] = df['time'].astype(str) + '-5:00'       # set UTC offset
+
+        lat_units = df.latitude.str[:4]                     # set decimals for latitude
+        lat_dec = df.latitude.str[4:]
+        lat = lat_units + '.' + lat_dec
+        df['latitude'] = lat
+
+        long_units = df.longitude.str[:4]                   # set decimals for longitude
+        long_dec = df.longitude.str[4:]
+        long = long_units + '.' + long_dec
+        df['longitude'] = long
+
         base_name = os.path.splitext(f_name)[0]             # rename the processed file
+        print('Sanitizing', f_name, '->', end=' ')
         f_name = base_name + '_erddap' + '.csv'
+        print(f_name)
         df.to_csv(f_name,                                   # save to csv
                   index=False,
                   encoding='utf-8',
