@@ -65,7 +65,7 @@ def sila2csvconv(data_path_dir):
         print('Sanitizing', f_name, '->', end=' ')
         f_name = base_name + '_erddap' + '.csv'
         print(f_name)
-        df.to_csv(f_name,  # save to csv
+        df.to_csv(os.path.join(data_path_dir, f_name),  # save to csv
                   index=False,
                   encoding='utf-8',
                   columns=['networkId', 'dataCode', 'stationCode', 'latitude', 'longitude', 'time', 'subStationCode',
