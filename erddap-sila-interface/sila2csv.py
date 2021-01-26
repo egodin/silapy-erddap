@@ -68,7 +68,7 @@ def sila2csvconv(data_path_dir):
         df.to_csv(os.path.join(data_path_dir, f_name),  # save to csv
                   index=False,
                   encoding='utf-8',
-                  columns=['networkId', 'dataCode', 'stationCode', 'latitude', 'longitude', 'time', 'subStationCode',
+                  columns=['networkId', 'stationCode', 'latitude', 'longitude', 'time', 'subStationCode',
                            'qualityCode', 'measuredData'])
 
 
