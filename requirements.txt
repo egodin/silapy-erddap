@@ -1,7 +1,7 @@
-requests==2.25.1
-pandas==1.2.4
-erddapy==1.0.0
-setuptools==56.0.0
-chardet==4.0.0
+requests~=2.32.2
+pandas~=2.2.2
+erddapy~=2.2.0
+setuptools~=70.0.0
+chardet~=4.0.0
 
-matplotlib==3.4.1
+matplotlib~=3.9.0
